@@ -6,19 +6,19 @@ import travel from '/public/image/travel.jpg';
 export const projectsData = [
     {
         id: 1,
-        name: 'AI Powered Financial App',
-        description: "Me and my team built an AI-powered financial mobile application. I have developed API using Express, Typescript, OpenAI, AWS, and MongoDB. Used OTP via AWS SES, Google, and Facebook for the authentication system. Built AI assistants using OpenAI's latest model and trained using our dataset. Voice messages are converted to text using AWS Transcribe. The app fetches data from Google Sheets and generates a PDF term sheet, sent via AWS SES.",
-        tools: ['Express', 'MongoDB', 'OpenAI API', 'AWS SES', 'AWS S3', 'Node Mailer', 'Joi', 'Puppeteer', 'EC2', 'PM2', 'Nginx'],
-        role: 'Backend Developer',
+        name: 'Client Project Tracking',
+        description: "This is a project aimed at facilitating communication between the development team and the client at Kante Company. For this project, I used Angular for the frontend, Spring Boot and Django for the backend, and MongoDB and Firebase for data storage.",
+        tools: ['Angular', 'MongoDB', 'OpenAI API', 'Spring Boot', 'Django', 'Java', 'Tailwind CSS', 'Flowbite', 'Firebase'],
+        role: 'Full Stack Developer',
         code: '',
         demo: '',
         image: crefin,
     },
     {
         id: 2,
-        name: 'Travel Agency App',
-        description: 'I have designed and developed a full-stack web app for 2Expedition, a travel agency in Armenia. I created the UI using NextJS, Typescript, MUI, TailwindCSS, Google Maps, Sun-Editor, and React Slick. The app supports multiple languages and currencies. I developed the API using NestJS, Typescript, MySQL, TypeORM, AWS, and Nodemailer. I deployed the front-end app to AWS Amplify and the back-end app to AWS EC2.',
-        tools: ['NextJS', 'Tailwind CSS', "Google Maps", "NestJS", "TypeScript", "MySQL", "AWS S3", "Sun-Editor", "Gmail Passkey"],
+        name: 'Aora (Mobile Application)',
+        description: 'This is a personal project I developed to allow users to listen to music, similar to Spotify. I used React Native for the frontend and Firebase as the sole backend.',
+        tools: ['React Native', 'Tailwind CSS', "Firebase", "TypeScript", "SQLite"],
         role: 'Full Stack Developer',
         code: '',
         demo: '',
@@ -26,24 +26,14 @@ export const projectsData = [
     },
     {
         id: 3,
-        name: 'AI Powered Real Estate',
-        description: 'My team built an AI-based real estate app using Replicate API and OpenAI. We used Express, Typescript, OpenAI, Replicate, Stripe, and Mongoose to develop the API. We utilized NextJS, Formik, TailwindCSS, and other npm libraries for the UI. We have trained multiple AI assistants using the latest GPT model and integrated Replicate API for image processing. We added role-based auth, subscription plans, Cron job scheduling, and payment integration with Stripe.',
-        tools: ['React', 'Bootstrap', 'SCSS', 'Stripe', 'Express', 'TypeScript', 'MongoDB', 'Azure Blob', 'OpenAI API', 'Replicate AI', 'Cronjob', 'JWT'],
+        name: 'Car E-Commerce Platform',
+        description: 'My team and I designed a web and mobile application for selling used cars. For the web application, we chose Spring Boot and React JS, while for the mobile app, we chose Ionic. For data storage, we selected Postgres and MongoDB. We had one month to develop the application and then deploy it on the cloud.',
+        tools: ['Spring Boot', 'React JS', 'MongoDB', 'Potsgres', 'Firebase', 'Railway', 'Ionic', 'Tailwind CSS', 'JWT'],
         code: '',
-        role: 'Full Stack Developer',
+        role: 'Backend Developer',
         demo: '',
         image: realEstate,
     },
-    {
-        id: 4,
-        name: 'Newsroom Management',
-        description: "My team and I developed a newspaper management dashboard application called Newsroom Management. As a front-end developer, I worked on creating the dashboard using NextJS, Material UI, Redux, Calendar, and other necessary npm libraries. We used React Redux to manage the application's state and React-hook-form and Sun Editor to handle forms.",
-        tools: ['NextJS', 'Material UI', 'Redux', 'Sun Editor', "Calendar"],
-        code: '',
-        demo: '',
-        image: ayla,
-        role: 'Full Stack Developer',
-    }
 ];
 
 

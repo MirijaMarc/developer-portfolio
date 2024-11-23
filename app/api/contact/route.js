@@ -75,18 +75,19 @@ export async function POST(request) {
     const chat_id = process.env.TELEGRAM_CHAT_ID;
 
     // Validate environment variables
-    if (!token || !chat_id) {
-      return NextResponse.json({
-        success: false,
-        message: 'Telegram token or chat ID is missing.',
-      }, { status: 400 });
-    }
+    // if (!token || !chat_id) {
+    //   return NextResponse.json({
+    //     success: false,
+    //     message: 'Telegram token or chat ID is missing.',
+    //   }, { status: 400 });
+    // }
 
     const message = `New message from ${name}\n\nEmail: ${email}\n\nMessage:\n\n${userMessage}\n\n`;
 
     // Send Telegram message
-    const telegramSuccess = await sendTelegramMessage(token, chat_id, message);
-
+    // const telegramSuccess = await sendTelegramMessage(token, chat_id, message);
+    const telegramSuccess = true;
+    
     // Send email
     const emailSuccess = await sendEmail(payload, message);
 

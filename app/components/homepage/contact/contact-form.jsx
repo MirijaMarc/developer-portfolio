@@ -15,23 +15,58 @@ function ContactForm() {
     message: "",
   });
 
+  // Vérifier si un email est valide
+  const isValidEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  // Vérification des champs obligatoires
   const checkRequired = () => {
     if (userInput.email && userInput.message && userInput.name) {
-      setError({ ...error, required: false });
+      setError((prev) => ({ ...prev, required: false }));
     }
   };
 
+  // Gestion des changements dans les champs
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+
+    setUserInput((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+
+    // Valider l'email en temps réel
+    if (name === "email") {
+      if (isValidEmail(value)) {
+        setError((prev) => ({ ...prev, email: false }));
+      } else {
+        setError((prev) => ({ ...prev, email: true }));
+      }
+    }
+
+    // Vérifier les champs obligatoires
+    checkRequired();
+  };
+
+  // Envoyer le formulaire
   const handleSendMail = async (e) => {
     e.preventDefault();
 
+    // Vérifier les champs obligatoires
     if (!userInput.email || !userInput.message || !userInput.name) {
-      setError({ ...error, required: true });
+      setError((prev) => ({ ...prev, required: true }));
       return;
-    } else if (error.email) {
+    }
+
+    // Vérifier si l'email est valide
+    if (!isValidEmail(userInput.email)) {
+      setError((prev) => ({ ...prev, email: true }));
       return;
-    } else {
-      setError({ ...error, required: false });
-    };
+    }
+
+    setError((prev) => ({ ...prev, required: false }));
 
     try {
       setIsLoading(true);
@@ -47,10 +82,10 @@ function ContactForm() {
         message: "",
       });
     } catch (error) {
-      toast.error(error?.response?.data?.message);
+      toast.error(error?.response?.data?.message || "An error occurred");
     } finally {
       setIsLoading(false);
-    };
+    }
   };
 
   return (

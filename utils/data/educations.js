@@ -1,20 +1,15 @@
 export const educations = [
   {
     id: 1,
-    title: "Bachelor Degree",
-    duration: "2020 - Present",
-    institution: "National University of Bangladesh",
+    title: "Bachelor's Degree in Computer Science",
+    duration: "2021 - 2024",
+    institution: "IT University of Antananarivo",
   },
   {
     id: 2,
-    title: "Higher Secondary Certificate",
-    duration: "2018 - 2020",
-    institution: "Noakhali Islamia Kamil Madrasah",
+    title: "Malagasy Baccalauréat, Series C, with honors",
+    duration: "2021",
+    institution: "St Michel Itaosy",
   },
-  {
-    id: 3,
-    title: "Secondary School Certificate",
-    duration: "2008 - 2018",
-    institution: "Baitus Saif Islamia Madrasah",
-  }
+
 ]
