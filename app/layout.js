@@ -10,7 +10,7 @@ import ScrollToTop from "./components/helper/scroll-to-top";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Portfolio of Mirija Marc - Software Developer",
+  title: "Mirija Marc ",
   description:
     "Welcome to the portfolio of Mirija Marc! I am a passionate full-stack developer and a self-taught programmer. Driven by curiosity, I enjoy exploring new technologies and thrive on continuous learning. I am open to collaboration, eager to take on new challenges, and committed to growing with every opportunity.",
 };
