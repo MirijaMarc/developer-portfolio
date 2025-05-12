@@ -68,7 +68,7 @@ function Education() {
                               alt="Hero"
                               width={45}
                               height={45}
-                              className="w-12 h-12 rounded-sm"
+                              className="min-w-12 min-h-12 rounded-sm"
                             />
                           ) : (
                             <BsPersonWorkspace size={36} />
